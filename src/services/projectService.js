@@ -1,4 +1,4 @@
-const Project = require("../src/model/ProjectSchema");
+const Project = require("../model/ProjectSchema");
 
 class ProjectService {
   async addProject(req) {

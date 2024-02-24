@@ -1,4 +1,4 @@
-const { transporter } = require("../src/config/mailer");
+const { transporter } = require("../config/mailer");
 require("dotenv").config();
 
 exports.userEmailTemp = {

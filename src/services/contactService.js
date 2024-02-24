@@ -1,4 +1,4 @@
-const ContactMessage = require("../src/model/contactSchema");
+const ContactMessage = require("../model/contactSchema");
 
 class ContactService {
   async addMessage(req) {
