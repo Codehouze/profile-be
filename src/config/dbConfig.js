@@ -3,14 +3,21 @@ require("dotenv").config();
 // Connection URI
 const db_url = process.env.DATABASE_URL;
 
-const connectDb = mongoose.connect(db_url, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-if (connectDb) {
-  console.log("database connected");
-} else {
-  console.log("database connection error");
+const connectDb = async () => {
+  try {
+    mongoose.connect(db_url, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+  } catch (error) {
+    console.log("database connection error");
+  }
+  if (mongoose.connection.readyState === 1) {
+    console.log("database connected");
+  }
 }
 
+
 module.exports = connectDb;
+
+
