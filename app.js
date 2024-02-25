@@ -11,6 +11,9 @@ const swaggerUI = require("swagger-ui-express");
 
 const cors = require("cors");
 require("dotenv").config();
+if (NODE_ENV === "production") {
+connectDb();
+}
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -18,9 +21,7 @@ app.use(cors({ origin: "*" }));
 const publicPath = path.join(__dirname, "..", "public");
 app.use(express.static(publicPath));
 
-// if (NODE_ENV === "production") {
-  connectDb();
-// }
+
 
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 app.use("/api/v1/contact", require("./src/routes/contactRoutes"));
