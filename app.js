@@ -19,7 +19,7 @@ const publicPath = path.join(__dirname, "..", "public");
 app.use(express.static(publicPath));
 
 if (NODE_ENV === "production") {
-  connectDb;
+  connectDb();
 }
 
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
