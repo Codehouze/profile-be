@@ -18,9 +18,9 @@ app.use(cors({ origin: "*" }));
 const publicPath = path.join(__dirname, "..", "public");
 app.use(express.static(publicPath));
 
-if (NODE_ENV === "production") {
+// if (NODE_ENV === "production") {
   connectDb();
-}
+// }
 
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 app.use("/api/v1/contact", require("./src/routes/contactRoutes"));
