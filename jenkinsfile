@@ -1,6 +1,5 @@
 pipeline {
-    agent any  // Adjust if specific agent required
-
+    agent any  // Adjust if specific agent required 
     stages {
         stage('Build') {
             steps {
