@@ -28,7 +28,7 @@ pipeline {
                     // sh 'scp -r ./build/* user@server_ip:/path/to/public/'
                     echo 'Done'
 
-                    // Optional: Additional deployment steps such as restarting a service
+                    // Optional: Additional deployment steps such as restarting a services
 
                 }
             }
