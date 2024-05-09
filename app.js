@@ -11,9 +11,9 @@ const swaggerUI = require("swagger-ui-express");
 
 const cors = require("cors");
 require("dotenv").config();
-if (NODE_ENV === "production") {
+// if (NODE_ENV === "production") {
 connectDb();
-}
+// }
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
