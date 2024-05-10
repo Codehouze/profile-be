@@ -4,7 +4,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'npm install'
+                    echo "We are Building the repo here"
+                    // sh 'npm install'
                     // sh 'npm run build'
                 }
             }
